@@ -1,0 +1,60 @@
+﻿@{
+  Layout = null;
+}
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<!---- head>
+  ================================================== -->
+@await Component.InvokeAsync("_HeadComponent")
+<!------------Head>
+
+<body id="top">
+
+  <!-- header
+  ================================================== -->
+  @await Component.InvokeAsync("_NavbarComponent")
+<!-- end s-header
+
+<!-- home
+================================================== -->
+  @await Component.InvokeAsync("_FeatureComponent")
+<!-- end s-home -->
+
+<!-- about
+================================================== -->
+  @await Component.InvokeAsync("_AboutComponents")
+
+<!-- works
+================================================== -->
+  @await Component.InvokeAsync("_PortfolioComponent")
+<!-- end works -->
+
+<!-- testimonials
+================================================== -->
+  @await Component.InvokeAsync("_TestimonialComponent")
+
+<!-- end s-testimonials -->
+
+<!-- blog
+================================================== -->
+  @await Component.InvokeAsync("_BlogComponent")
+<!-- end s-blog -->
+
+<!-- s-stats
+================================================== -->
+  @await Component.InvokeAsync("_StatsComponent")
+<!-- end s-stats -->
+
+<!-- s-stats
+================================================== -->
+  @await Component.InvokeAsync("_ContactComponents")
+<!-- end s-contact -->
+
+<!-- footer
+================================================== -->
+  @await Component.InvokeAsync("_FooterComponent")
+<!-- end footer -->
+</body>
+
+</html>
