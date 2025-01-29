@@ -1,13 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace PortfolioWebsite.ViewComponents
+namespace PortfolioWebsite.ViewComponents.LayoutViewComponent
 {
-    public class _HeadComponent: ViewComponent
+    public class _LayoutSidebarComponent : ViewComponent
     {
         public IViewComponentResult Invoke()
         {
             return View();
         }
-
     }
 }

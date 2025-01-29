@@ -2,10 +2,11 @@
 
 namespace PortfolioWebsite.ViewComponents
 {
-    public class _HeadComponent: ViewComponent
+    public class _LayoutScriptComponent: ViewComponent
     {
         public IViewComponentResult Invoke()
         {
+
             return View();
         }
 
