@@ -1,7 +1,8 @@
-﻿
+﻿@using PortfolioWebsite.DAL.Entities
+@model List<ToDoList> 
 @{
-    ViewData["Title"] = "Index";
-    Layout = "~/Views/Layout/Index.cshtml";
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Layout/Index.cshtml";
 }
 
 <div class="content">
@@ -20,7 +21,7 @@
 							<div class="col-7 d-flex align-items-center">
 								<div class="numbers">
 									<p class="card-category">Yetenek Sayısı</p>
-									<h4 class="card-title">@ViewBag.v1</h4>
+									<h4 class="card-title"> @ViewBag.v1</h4>
 								</div>
 							</div>
 						</div>
@@ -243,7 +244,7 @@
 				</div>
 			</div>
 		</div>
-    <br />
+		<br />
 		<div class="row">
 			<div class="col-md-3">
 				<div class="card card-stats card-warning">

@@ -6,6 +6,8 @@ namespace PortfolioWebsite.Controllers
     public class MessageController : Controller
     {
         PortfolioContext context = new PortfolioContext();
+
+        [HttpGet]
         public IActionResult Inbox()
         {
             var values = context.Messages.ToList();
@@ -27,7 +29,7 @@ namespace PortfolioWebsite.Controllers
             context.SaveChanges();
             return RedirectToAction("Inbox");
         }
-
+        [HttpDelete("{id}")]
         public IActionResult DeleteMessage(int id)
         {
             var value = context.Messages.Find(id);
@@ -35,15 +37,14 @@ namespace PortfolioWebsite.Controllers
             context.SaveChanges();
             return RedirectToAction("Inbox");
         }
-
+        [HttpGet("{id}")]
         public IActionResult SeeMessages(int id)
         {
-            var value = context.Messages.Find(id);  
+            var value = context.Messages.Find(id);
             value.IsRead = true;
             context.SaveChanges();
             return View(value);
 
         }
-
     }
 }

@@ -49,19 +49,21 @@
             </li>
             <li>
               <div class="notif-center">
-                @foreach (var item in Model)
+                @if (Model != null && Model.Any())
                 {
-                  <a href="#">
-                    <div class="notif-icon notif-success"> <i class="@item.ImageUrl"></i> </div>
-                    <div class="notif-content">
-                      <span class="block">
-                        @item.Title
-                      </span>
-                      <span class="time">@item.Date.ToShortDateString();</span>
-                    </div>
-                  </a>
+                  @foreach (var item in Model)
+                  {
+                    <a href="#">
+                      <div class="notif-icon notif-success"> <i class="@item.ImageUrl"></i> </div>
+                      <div class="notif-content">
+                        <span class="block">
+                          @item.Title
+                        </span>
+                        <span class="time">@item.Date</span>
+                      </div>
+                    </a>
+                  }
                 }
-
 
 
               </div>
